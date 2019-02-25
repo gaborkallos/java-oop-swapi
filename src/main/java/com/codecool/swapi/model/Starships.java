@@ -20,8 +20,6 @@ public class Starships {
     private String starship_class;
     List<People> pilots = new ArrayList<>();
     List<Film> films = new ArrayList<>();
-    private String created;
-    private String edited;
     private String url;
 
 }
