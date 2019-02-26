@@ -6,12 +6,15 @@
     <groupId>com.coodecool.swapi</groupId>
     <artifactId>swapi</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jetty.version>9.4.12.v20180830</jetty.version>
     </properties>
     <build>
+        <finalName>java-oop-swapi</finalName>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

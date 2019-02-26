@@ -39,10 +39,10 @@ public class PlanetController extends HttpServlet {
             ContentResponse resp = req.send();
 
             String contentAsString = resp.getContentAsString();
-            System.out.println(contentAsString);
+//            System.out.println(contentAsString);
             ObjectMapper mapper = new ObjectMapper();
             PlanetPage planetPage = mapper.readValue(contentAsString, PlanetPage.class);
-            System.out.println(planetPage.toString());
+//            System.out.println(planetPage.toString());
             httpClient.stop();
             return planetPage;
         } catch (Exception e) {
@@ -57,9 +57,16 @@ public class PlanetController extends HttpServlet {
 
         List<Planet> planets = getPlanetData().getResults();
 
+        for (Planet planet : planets) {
+            for(String url : planet.getResidents()){
+                System.out.println(url);
+            }
+        }
+
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
         WebContext context = new WebContext(request, response, request.getServletContext());
         context.setVariable("planets", planets);
+        engine.process("index.html", context, response.getWriter());
     }
 }
 

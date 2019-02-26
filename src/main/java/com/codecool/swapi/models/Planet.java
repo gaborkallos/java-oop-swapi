@@ -3,6 +3,7 @@ package com.codecool.swapi.models;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -24,8 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "edited",
         "url"
 })
-public class Planet implements Serializable
-{
+public class Planet implements Serializable {
 
     @JsonProperty("name")
     private String name;
@@ -195,5 +195,9 @@ public class Planet implements Serializable
     @JsonProperty("url")
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public int getNumberofResidents() {
+        return getResidents().size();
     }
 }
