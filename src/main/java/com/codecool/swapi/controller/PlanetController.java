@@ -1,5 +1,7 @@
 package com.codecool.swapi.controller;
 
+import com.codecool.swapi.config.TemplateEngineUtil;
+import com.codecool.swapi.models.Planet;
 import com.codecool.swapi.models.PlanetPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -9,10 +11,22 @@ import org.eclipse.jetty.client.api.Request;
 import org.eclipse.jetty.http.HttpHeader;
 import org.eclipse.jetty.http.HttpMethod;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.WebContext;
 
-public class PlanetController {
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
 
-    private void getPlanetData() {
+
+@WebServlet(urlPatterns = {"/"})
+public class PlanetController extends HttpServlet {
+
+    private PlanetPage getPlanetData() {
         String url = "https://swapi.co/api/planets/";
         HttpClient httpClient = new HttpClient(new SslContextFactory());
         try {
@@ -30,13 +44,22 @@ public class PlanetController {
             PlanetPage planetPage = mapper.readValue(contentAsString, PlanetPage.class);
             System.out.println(planetPage.toString());
             httpClient.stop();
+            return planetPage;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 
-    public static void main(String[] args) {
-        PlanetController pc = new PlanetController();
-        pc.getPlanetData();
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        List<Planet> planets = getPlanetData().getResults();
+
+        TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
+        WebContext context = new WebContext(request, response, request.getServletContext());
+        context.setVariable("planets", planets);
     }
 }
+

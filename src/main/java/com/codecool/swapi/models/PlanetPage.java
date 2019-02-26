@@ -3,6 +3,7 @@ package com.codecool.swapi.models;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -14,8 +15,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "previous",
         "results"
 })
-public class PlanetPage implements Serializable
-{
+public class PlanetPage implements Serializable {
 
     @JsonProperty("count")
     private Integer count;
@@ -74,4 +74,5 @@ public class PlanetPage implements Serializable
         sb.append('}');
         return sb.toString();
     }
+
 }
