@@ -22,7 +22,7 @@ public class PlanetPage implements Serializable {
     @JsonProperty("next")
     private String next;
     @JsonProperty("previous")
-    private Object previous;
+    private String previous;
     @JsonProperty("results")
     private List<Planet> results = new ArrayList<Planet>();
     private final static long serialVersionUID = 7661845106916889280L;
@@ -48,12 +48,12 @@ public class PlanetPage implements Serializable {
     }
 
     @JsonProperty("previous")
-    public Object getPrevious() {
+    public String getPrevious() {
         return previous;
     }
 
     @JsonProperty("previous")
-    public void setPrevious(Object previous) {
+    public void setPrevious(String previous) {
         this.previous = previous;
     }
 

@@ -69,7 +69,7 @@
                 <th>Surface Water</th>
                 <th>Population</th>
                 <th>Residents</th>
-                <th></th>
+                <th>Films</th>
             </tr>
             </thead>
             <tbody>
@@ -93,6 +93,16 @@
                             </button>
                         </div>
                         <span th:unless="${planet.getResidents().size()>0}">0</span>
+                    </td>
+                    <td align="center">
+                        <div th:if="${planet.getFilms().size()>0}">
+                            <button class="btn btn-outline-info" th:text="${planet.getFilms().size()}"
+                                    th:value="${planet.getName()}"
+                                    type="button">
+                                0
+                            </button>
+                        </div>
+                        <span th:unless="${planet.getFilms().size()>0}">0</span>
                     </td>
                 </tr>
             </div>

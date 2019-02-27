@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Objects;
 
 
 @WebServlet(urlPatterns = {"/"})
@@ -59,7 +60,7 @@ public class PlanetController extends HttpServlet {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
         WebContext context = new WebContext(request, response, request.getServletContext());
         context.setVariable("pagenumber", pageNumber);
-        context.setVariable("planets", getPlanetData().getResults());
+        context.setVariable("planets", Objects.requireNonNull(getPlanetData()).getResults());
         engine.process("index.html", context, response.getWriter());
     }
 
