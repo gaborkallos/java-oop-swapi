@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb48ce68-d549-4ba7-bf22-38135619e14d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/People.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/ResidentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/ResidentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/residents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/residents.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,19 +33,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="88" column="51" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="51" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/residents.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+                <state relative-caret-position="48">
+                  <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
@@ -54,33 +44,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-398">
-                  <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="49" />
+                <state relative-caret-position="200">
+                  <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="57" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/PlanetPage.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="918">
-                  <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
-                  <folding>
-                    <element signature="e#714#722#0" expanded="true" />
-                    <element signature="e#855#856#0" expanded="true" />
-                    <element signature="e#883#884#0" expanded="true" />
-                    <element signature="e#953#954#0" expanded="true" />
-                    <element signature="e#987#988#0" expanded="true" />
-                    <element signature="e#1044#1045#0" expanded="true" />
-                    <element signature="e#1071#1072#0" expanded="true" />
-                    <element signature="e#1137#1138#0" expanded="true" />
-                    <element signature="e#1169#1170#0" expanded="true" />
-                    <element signature="e#1234#1235#0" expanded="true" />
-                    <element signature="e#1265#1266#0" expanded="true" />
-                    <element signature="e#1452#1453#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -90,7 +57,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/People.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-3200">
-                  <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+                  <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1875#1891#0" expanded="true" />
@@ -167,6 +134,15 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="401">
+                  <caret line="34" selection-start-line="15" selection-start-column="3" selection-end-line="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -174,8 +150,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/ResidentsController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="31" column="110" lean-forward="true" selection-start-line="31" selection-start-column="110" selection-end-line="31" selection-end-column="110" />
+                <state relative-caret-position="421">
+                  <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -211,9 +187,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/config/PageNumber.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/PlanetPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/templates/residents.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/People.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/residents.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/ResidentsController.java" />
       </list>
     </option>
@@ -347,7 +323,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551269819580" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551274183948" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -464,17 +440,25 @@
       <option name="project" value="LOCAL" />
       <updated>1551268846134</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="residents url in a list">
+      <created>1551269858562</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1551269858562</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23010000" />
+    <option name="totallyTimeSpent" value="26886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.23685667" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.21804096" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -571,7 +555,8 @@
     <MESSAGE value="remove unused imports" />
     <MESSAGE value="refactor PlanetController doPost method" />
     <MESSAGE value="residents controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="residents controller" />
+    <MESSAGE value="residents url in a list" />
+    <option name="LAST_COMMIT_MESSAGE" value="residents url in a list" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/java-oop-swapi.iml">
@@ -626,17 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/residents.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/People.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3200">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1875#1891#0" expanded="true" />
@@ -723,16 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-398">
-          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/PlanetPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -756,15 +724,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="88" column="51" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="51" />
+        <state relative-caret-position="401">
+          <caret line="34" selection-start-line="15" selection-start-column="3" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/residents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/ResidentsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="31" column="110" lean-forward="true" selection-start-line="31" selection-start-column="110" selection-end-line="31" selection-end-column="110" />
+        <state relative-caret-position="421">
+          <caret line="74" column="1" lean-forward="true" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
