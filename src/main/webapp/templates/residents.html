@@ -57,7 +57,7 @@
                     <td th:text="${character.getGender()}" align="center"></td>
                     <td align="center">
                         <div th:if="${character.getFilms().size()>0}">
-                            <form action="/resident" method="post">
+                            <form action="/films" method="post">
                                 <button class="btn btn-outline-info" th:text="${character.getFilms().size()}"
                                         th:value="${character.getFilms()}"
                                         type="submit" name="films">

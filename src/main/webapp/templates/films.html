@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Films</title>
+    <!-- Bootstrap components -->
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!--Latest compiled and minified Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- End of Bootstrap components -->
+
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <table class="table table-hover" width="100%">
+            <thead class="thead-light">
+            <tr align="center">
+                <th>Title</th>
+                <th>Episode ID</th>
+                <th>Release Date</th>
+                <th>Characthers</th>
+                <th>Planets</th>
+            </tr>
+            </thead>
+            <tbody>
+            <div>
+                <tr th:each="film : ${films}">
+                    <td th:text="${film.getTitle()}"> Name</td>
+                    <td th:text="${film.getEpisodeId()}"> Name</td>
+                    <td th:text="${film.getReleaseDate()}"> Name</td>
+                    <td align="center">
+                        <div th:if="${film.getCharacters().size()>0}">
+                            <form action="/characters" method="post">
+                                <button class="btn btn-outline-info" th:text="${film.getCharacters().size()}"
+                                        th:value="${film.getCharacters()}"
+                                        type="submit" name="characters">
+                                    0
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div th:if="${film.getPlanets().size()>0}">
+                            <form action="/planets" method="post">
+                                <button class="btn btn-outline-info" th:text="${film.getPlanets().size()}"
+                                        th:value="${film.getPlanets()}"
+                                        type="submit" name="planets">
+                                    0
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+
+                </tr>
+            </div>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

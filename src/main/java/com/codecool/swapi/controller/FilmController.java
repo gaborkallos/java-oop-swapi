@@ -1,8 +1,9 @@
 package com.codecool.swapi.controller;
 
+
 import com.codecool.swapi.config.TemplateEngineUtil;
+import com.codecool.swapi.models.Film;
 import com.codecool.swapi.models.People;
-import com.codecool.swapi.models.PlanetPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.ContentResponse;
@@ -22,29 +23,21 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
+@WebServlet(urlPatterns = {"/films"})
+public class FilmController extends HttpServlet {
 
-@WebServlet(urlPatterns = {"/resident"})
-public class ResidentsController extends HttpServlet {
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        //TODO: if we need it
-    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
         WebContext context = new WebContext(request, response, request.getServletContext());
         response.setCharacterEncoding("utf-8");
-        String residentsUrl = request.getParameter("residents");
-        if (residentsUrl != null) {
-            List<String> residents = Arrays.asList(residentsUrl.substring(1, residentsUrl.length() - 1).split(", "));
-            List<People> characters = new ArrayList<>();
-            for (String url : residents) {
+        String filmsURL = request.getParameter("films");
+        if (filmsURL != null) {
+            List<String> filmsURLList = Arrays.asList(filmsURL.substring(1, filmsURL.length() - 1).split(", "));
+            List<Film> films = new ArrayList<>();
+            for (String url : filmsURLList) {
                 HttpClient httpClient = new HttpClient(new SslContextFactory());
 
                 try {
@@ -57,17 +50,18 @@ public class ResidentsController extends HttpServlet {
 
                     String contentAsString = resp.getContentAsString();
                     ObjectMapper mapper = new ObjectMapper();
-                    People people = mapper.readValue(contentAsString, People.class);
-                    characters.add(people);
+                    Film film = mapper.readValue(contentAsString, Film.class);
+                    films.add(film);
                     httpClient.stop();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-            context.setVariable("characters", characters);
-            engine.process("residents.html", context, response.getWriter());
+            context.setVariable("films", films);
+            engine.process("films.html", context, response.getWriter());
         } else {
-          response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
+
     }
 }
