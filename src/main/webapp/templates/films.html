@@ -45,10 +45,10 @@
                     <td th:text="${film.getReleaseDate()}"> Name</td>
                     <td align="center">
                         <div th:if="${film.getCharacters().size()>0}">
-                            <form action="/characters" method="post">
+                            <form action="/resident" method="post">
                                 <button class="btn btn-outline-info" th:text="${film.getCharacters().size()}"
                                         th:value="${film.getCharacters()}"
-                                        type="submit" name="characters">
+                                        type="submit" name="residents">
                                     0
                                 </button>
                             </form>
