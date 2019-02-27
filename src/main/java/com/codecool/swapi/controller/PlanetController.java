@@ -1,5 +1,6 @@
 package com.codecool.swapi.controller;
 
+import com.codecool.swapi.config.PageNumber;
 import com.codecool.swapi.config.TemplateEngineUtil;
 import com.codecool.swapi.models.Planet;
 import com.codecool.swapi.models.PlanetPage;
@@ -26,8 +27,11 @@ import java.util.List;
 @WebServlet(urlPatterns = {"/"})
 public class PlanetController extends HttpServlet {
 
+    private int pageNumber = 1;
+
     private PlanetPage getPlanetData() {
-        String url = "https://swapi.co/api/planets/";
+
+        String url = "https://swapi.co/api/planets/?page=" + pageNumber;
         HttpClient httpClient = new HttpClient(new SslContextFactory());
         try {
 
@@ -55,18 +59,29 @@ public class PlanetController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Planet> planets = getPlanetData().getResults();
-
-        for (Planet planet : planets) {
-            for(String url : planet.getResidents()){
-                System.out.println(url);
-            }
-        }
-
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
         WebContext context = new WebContext(request, response, request.getServletContext());
-        context.setVariable("planets", planets);
+        context.setVariable("pagenumber", pageNumber);
+        context.setVariable("planets", getPlanetData().getResults());
         engine.process("index.html", context, response.getWriter());
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String next = request.getParameter("next");
+        String previous = request.getParameter("previous");
+        System.out.println("next: " + next + "--- previous: " + previous);
+        if (next != null) {
+            pageNumber++;
+            System.out.println("jump to page number: " + pageNumber);
+
+        } else if (previous != null) {
+            pageNumber--;
+            System.out.println("jump to page number: " + pageNumber);
+        }
+        response.sendRedirect("/");
+    }
 }
+
+
 

@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb48ce68-d549-4ba7-bf22-38135619e14d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/config/PageNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/javascript/residents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,10 +23,26 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-125">
-                  <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+                <state relative-caret-position="470">
+                  <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/config/PageNumber.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#173#174#0" expanded="true" />
+                    <element signature="e#126#127#0" expanded="true" />
+                    <element signature="e#159#160#0" expanded="true" />
+                    <element signature="e#208#209#0" expanded="true" />
+                    <element signature="e#252#253#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -75,8 +90,21 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+                <state relative-caret-position="-995">
+                  <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#4266#4273#1" expanded="true" />
+                    <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/residents.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -88,8 +116,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,8 +139,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/template/index.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Planet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/javascript/residents.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/config/PageNumber.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java" />
       </list>
     </option>
   </component>
@@ -184,6 +215,15 @@
               <item name="java-oop-swapi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="swapi" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="java-oop-swapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-oop-swapi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -205,7 +245,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551216606210" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551257951383" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -308,11 +348,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551185602796</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="json shown on index html">
+      <created>1551216643567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551216643567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14990000" />
+    <option name="totallyTimeSpent" value="20372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -385,7 +432,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jetty seting up" />
-    <option name="LAST_COMMIT_MESSAGE" value="jetty seting up" />
+    <MESSAGE value="json shown on index html" />
+    <option name="LAST_COMMIT_MESSAGE" value="json shown on index html" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/config/ThymeleafConfig.java">
@@ -454,20 +502,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/javascript/residents.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/config/PageNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#208#209#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        <state relative-caret-position="-995">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding>
+            <element signature="e#4266#4273#1" expanded="true" />
+            <element signature="n#style#0;n#tfoot#0;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

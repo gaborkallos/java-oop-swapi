@@ -35,6 +35,25 @@
 
 </head>
 <body>
+
+<nav class="navbar navbar-expand-sm bg-light">
+    <form action="/" method="post">
+        <ul class="navbar-nav">
+            <div th:if="${pagenumber>1}">
+                <button class="btn btn-outline-info" name="previous" value="previous" type="submit">
+                    Previous Page
+                </button>
+            </div>
+            <div th:if="${pagenumber<7}">
+                <button class="btn btn-outline-info" name="next" value="next" type="submit">
+                    Next Page
+                </button>
+            </div>
+        </ul>
+    </form>
+
+</nav>
+<br>
 <div class="container">
     <div class="card">
         <table class="table table-hover" width="100%">
@@ -67,8 +86,9 @@
                     <td th:text="${planet.getPopulation()}" align="center"></td>
                     <td align="center">
                         <div th:if="${planet.getResidents().size()>0}">
-                            <button type="button" class="btn btn-outline-info"
-                                    th:text="${planet.getResidents().size()}">
+                            <button class="btn btn-outline-info" th:text="${planet.getResidents().size()}"
+                                    th:value="${planet.getName()}"
+                                    type="button">
                                 0
                             </button>
                         </div>
@@ -78,6 +98,39 @@
             </div>
             </tbody>
         </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">Name</th>
+                            </tr>
+                            </thead>
+                            <tfoot id='modal-board' style="display: none">
+                            <tr>
+                                <td class="text-center">@name@</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 </body>
