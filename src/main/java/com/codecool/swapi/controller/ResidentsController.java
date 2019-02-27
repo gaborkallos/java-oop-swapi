@@ -10,11 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
 
-@WebServlet(urlPatterns = {"residents.html"})
+@WebServlet(urlPatterns = {"/resident"})
 public class ResidentsController extends HttpServlet {
 
     @Override
@@ -27,8 +28,11 @@ public class ResidentsController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String residents = request.getParameter("residents");
-        System.out.println(residents);
-        response.sendRedirect("residents.html");
+        String residentsString = request.getParameter("residents");
+        List<String> residents = Arrays.asList(residentsString.substring(1,residentsString.length()-1 ).split(", "));
+        for (String resident : residents){
+            System.out.println(resident);
+        }
+        response.sendRedirect("/resident");
     }
 }

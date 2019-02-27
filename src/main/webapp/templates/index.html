@@ -86,7 +86,7 @@
                     <td th:text="${planet.getPopulation()}" align="center"></td>
                     <td align="center">
                         <div th:if="${planet.getResidents().size()>0}">
-                            <form action="residents.html" method="post">
+                            <form action="/resident" method="post">
                                 <button class="btn btn-outline-info" th:text="${planet.getResidents().size()}"
                                         th:value="${planet.getResidents()}"
                                         type="submit" name="residents">
