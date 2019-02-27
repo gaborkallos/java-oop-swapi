@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="utf-8"/>
+<meta name="author" content="Codecool"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+<title>API WARS</title>
+<head>
+    <!-- Font Awsome call -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"
+            integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap components -->
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!--Latest compiled and minified Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- End of Bootstrap components -->
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-light">
+    <form action="/" method="post">
+        <ul class="navbar-nav">
+            <div th:if="${pagenumber>1}">
+                <button class="btn btn-outline-info" name="previous" value="previous" type="submit">
+                    Previous Page
+                </button>
+            </div>
+            <div th:if="${pagenumber<7}">
+                <button class="btn btn-outline-info" name="next" value="next" type="submit">
+                    Next Page
+                </button>
+            </div>
+        </ul>
+    </form>
+
+</nav>
+<br>
+<div class="container">
+    <div class="card">
+        <table class="table table-hover" width="100%">
+            <thead class="thead-light">
+            <tr align="center">
+                <th>Name</th>
+                <th>Rotation Period</th>
+                <th>Orbital Period</th>
+                <th>Diameter</th>
+                <th>Climate</th>
+                <th>Gravity</th>
+                <th>Terrain</th>
+                <th>Surface Water</th>
+                <th>Population</th>
+                <th>Residents</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <div>
+                <tr th:each="planet, iterStat : ${planets}">
+                    <td th:text="${planet.getName()}">planet Name</td>
+                    <td th:text="${planet.getRotationPeriod()}" align="center"></td>
+                    <td th:text="${planet.getOrbitalPeriod()}" align="center"></td>
+                    <td th:text="${planet.getDiameter()}" align="center"></td>
+                    <td th:text="${planet.getClimate()}" align="center"></td>
+                    <td th:text="${planet.getGravity()}" align="center"></td>
+                    <td th:text="${planet.getTerrain()}" align="center"></td>
+                    <td th:text="${planet.getSurfaceWater()}" align="center"></td>
+                    <td th:text="${planet.getPopulation()}" align="center"></td>
+                    <td align="center">
+                        <div th:if="${planet.getResidents().size()>0}">
+                            <button class="btn btn-outline-info" th:text="${planet.getResidents().size()}"
+                                    th:value="${planet.getName()}"
+                                    type="button">
+                                0
+                            </button>
+                        </div>
+                        <span th:unless="${planet.getResidents().size()>0}">0</span>
+                    </td>
+                </tr>
+            </div>
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">Name</th>
+                            </tr>
+                            </thead>
+                            <tfoot id='modal-board' style="display: none">
+                            <tr>
+                                <td class="text-center">@name@</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
