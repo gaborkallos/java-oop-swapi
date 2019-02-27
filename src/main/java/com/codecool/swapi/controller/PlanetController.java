@@ -35,9 +35,9 @@ public class PlanetController extends HttpServlet {
 
             httpClient.start();
             Request req = httpClient.newRequest(url)
-                    .method(HttpMethod.GET)
-                    .agent("java client")
-                    .header(HttpHeader.CONTENT_TYPE, "application/json");
+                                    .method(HttpMethod.GET)
+                                    .agent("java client")
+                                    .header(HttpHeader.CONTENT_TYPE, "application/json");
             ContentResponse resp = req.send();
 
             String contentAsString = resp.getContentAsString();
