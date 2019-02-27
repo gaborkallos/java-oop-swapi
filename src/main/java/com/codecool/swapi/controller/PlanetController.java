@@ -65,16 +65,12 @@ public class PlanetController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String next = request.getParameter("next");
-        String previous = request.getParameter("previous");
-        System.out.println("next: " + next + "--- previous: " + previous);
-        if (next != null) {
+        if (request.getParameter("next") != null) {
             pageNumber++;
-            System.out.println("jump to page number: " + pageNumber);
-
-        } else if (previous != null) {
+        } else if (request.getParameter("previous") != null) {
             pageNumber--;
-            System.out.println("jump to page number: " + pageNumber);
+        } else {
+            // TODO error handling
         }
         response.sendRedirect("/");
     }
