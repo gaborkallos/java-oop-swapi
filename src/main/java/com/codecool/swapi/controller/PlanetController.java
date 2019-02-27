@@ -1,8 +1,6 @@
 package com.codecool.swapi.controller;
 
-import com.codecool.swapi.config.PageNumber;
 import com.codecool.swapi.config.TemplateEngineUtil;
-import com.codecool.swapi.models.Planet;
 import com.codecool.swapi.models.PlanetPage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -21,7 +19,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 
 @WebServlet(urlPatterns = {"/"})
