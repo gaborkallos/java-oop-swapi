@@ -40,9 +40,17 @@
             <tbody>
             <div>
                 <tr th:each="film : ${films}">
-                    <td th:text="${film.getTitle()}"> Name</td>
-                    <td th:text="${film.getEpisodeId()}"> Name</td>
-                    <td th:text="${film.getReleaseDate()}"> Name</td>
+                    <td>
+                        <form action="/film" method="post">
+                            <button class="btn btn-outline-info" th:text="${film.getTitle()}"
+                                    th:value="${film.getUrl()}"
+                                    type="submit" name="film">
+                                Film title
+                            </button>
+                        </form>
+                    </td>
+                    <td th:text="${film.getEpisodeId()}" align="center"> episode id</td>
+                    <td th:text="${film.getReleaseDate()}" align="center"> release date</td>
                     <td align="center">
                         <div th:if="${film.getCharacters().size()>0}">
                             <form action="/resident" method="post">
