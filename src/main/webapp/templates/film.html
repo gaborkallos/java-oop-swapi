@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="icon" href="/static/image/sw.png" type="image/x-icon"/>
     <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
     <meta charset="UTF-8">
     <title th:text="${film.getTitle}"> Title</title>
@@ -24,8 +25,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- End of Bootstrap components -->
+
 </head>
 <body class="starwars-header">
+<embed src="/static/sound/swtheme.mp3" autostart="true" loop="true" width="2" height="0">
 <div align="center" style="top:0px; height: 600px; width: 100%">
     <div id="titles">
         <div id="titlecontent">
@@ -41,7 +44,7 @@
 <div class="container" style="top:600px">
     <table class="table table-hover table-dark" width="100%">
         <thead>
-        <th align="center" th:text="${film.getTitle}"> Title</th>
+        <th align="center" th:text="${film.getTitle}" style="font-size: 200%"> Title</th>
         </thead>
         <tr>
             <td> Director</td>
@@ -57,7 +60,7 @@
             <td>
                 Characters
             </td>
-            <td align="center">
+            <td>
                 <div th:if="${film.getCharacters().size()>0}">
                     <form action="/resident" method="post">
                         <button class="btn btn-outline-info" th:text="${film.getCharacters().size()}"
@@ -72,7 +75,7 @@
         </tr>
         <tr>
             <td> Planets</td>
-            <td align="center">
+            <td>
                 <div th:if="${film.getPlanets().size()>0}">
                     <form action="/planets" method="post">
                         <button class="btn btn-outline-info" th:text="${film.getPlanets().size()}"

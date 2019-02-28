@@ -46,10 +46,8 @@ public class PlanetsController extends HttpServlet {
             ContentResponse resp = req.send();
 
             String contentAsString = resp.getContentAsString();
-//            System.out.println(contentAsString);
             ObjectMapper mapper = new ObjectMapper();
             PlanetPage planetPage = mapper.readValue(contentAsString, PlanetPage.class);
-//            System.out.println(planetPage.toString());
             httpClient.stop();
             return planetPage;
         } catch (Exception e) {
