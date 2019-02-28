@@ -35,6 +35,8 @@
                 <th>Release Date</th>
                 <th>Characthers</th>
                 <th>Planets</th>
+                <th>Vehicles</th>
+                <th>Starships</th>
             </tr>
             </thead>
             <tbody>
@@ -72,6 +74,31 @@
                                 </button>
                             </form>
                         </div>
+                        <span th:unless="${film.getPlanets().size()>0}">0</span>
+                    </td>
+                    <td align="center">
+                        <div th:if="${film.getVehicles().size()>0}">
+                            <form action="/vehicles" method="post">
+                                <button class="btn btn-outline-info" th:text="${film.getVehicles().size()}"
+                                        th:value="${film.getVehicles()}"
+                                        type="submit" name="vehicles">
+                                    0
+                                </button>
+                            </form>
+                        </div>
+                        <span th:unless="${film.getVehicles().size()>0}">0</span>
+                    </td>
+                    <td align="center">
+                        <div th:if="${film.getStarships().size()>0}">
+                            <form action="/starships" method="post">
+                                <button class="btn btn-outline-info" th:text="${film.getStarships().size()}"
+                                        th:value="${film.getStarships()}"
+                                        type="submit" name="starships">
+                                    0
+                                </button>
+                            </form>
+                        </div>
+                        <span th:unless="${film.getStarships().size()>0}">0</span>
                     </td>
 
                 </tr>

@@ -30,48 +30,50 @@
         <table class="table table-hover" width="100%">
             <thead class="thead-light">
             <tr align="center">
-                <th>Title</th>
-                <th>Episode ID</th>
-                <th>Release Date</th>
-                <th>Characthers</th>
-                <th>Planets</th>
+                <th>Name</th>
+                <th>Model</th>
+                <th>Manufacture</th>
+                <th>Cost</th>
+                <th>Length</th>
+                <th>Speed</th>
+                <th>Class</th>
+                <th>Pilots</th>
+                <th>Films</th>
             </tr>
             </thead>
             <tbody>
             <div>
                 <tr th:each="vehicle : ${vehicles}">
-                    <td>
-                        <form action="/film" method="post">
-                            <button class="btn btn-outline-info" th:text="${film.getTitle()}"
-                                    th:value="${film.getUrl()}"
-                                    type="submit" name="film">
-                                Film title
-                            </button>
-                        </form>
-                    </td>
-                    <td th:text="${film.getEpisodeId()}" align="center"> episode id</td>
-                    <td th:text="${film.getReleaseDate()}" align="center"> release date</td>
+                    <td th:text="${vehicle.getName()}">Name</td>
+                    <td th:text="${vehicle.getModel()}" align="center"> model</td>
+                    <td th:text="${vehicle.getManufacturer()}" align="center"> manufacture</td>
+                    <td th:text="${vehicle.getCostInCredits()}" align="center"> cost</td>
+                    <td th:text="${vehicle.getLength()}" align="center"> length</td>
+                    <td th:text="${vehicle.getMaxAtmospheringSpeed()}" align="center"> speed</td>
+                    <td th:text="${vehicle.getVehicleClass()}" align="center"> class</td>
                     <td align="center">
-                        <div th:if="${film.getCharacters().size()>0}">
+                        <div th:if="${vehicle.getPilots().size()>0}">
                             <form action="/resident" method="post">
-                                <button class="btn btn-outline-info" th:text="${film.getCharacters().size()}"
-                                        th:value="${film.getCharacters()}"
+                                <button class="btn btn-outline-info" th:text="${vehicle.getPilots().size()}"
+                                        th:value="${vehicle.getPilots()}"
                                         type="submit" name="residents">
                                     0
                                 </button>
                             </form>
                         </div>
+                        <span th:unless="${vehicle.getPilots().size()>0}">0</span>
                     </td>
                     <td align="center">
-                        <div th:if="${film.getPlanets().size()>0}">
-                            <form action="/planets" method="post">
-                                <button class="btn btn-outline-info" th:text="${film.getPlanets().size()}"
-                                        th:value="${film.getPlanets()}"
-                                        type="submit" name="planets">
+                        <div th:if="${vehicle.getFilms().size()>0}">
+                            <form action="/films" method="post">
+                                <button class="btn btn-outline-info" th:text="${vehicle.getFilms().size()}"
+                                        th:value="${vehicle.getFilms()}"
+                                        type="submit" name="films">
                                     0
                                 </button>
                             </form>
                         </div>
+                        <span th:unless="${vehicle.getFilms().size()>0}">0</span>
                     </td>
 
                 </tr>

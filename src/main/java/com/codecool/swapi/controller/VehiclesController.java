@@ -58,7 +58,7 @@ public class VehiclesController extends HttpServlet {
                 }
             }
             context.setVariable("vehicles", vehicles);
-            engine.process("vehicle.html", context, response.getWriter());
+            engine.process("vehicles.html", context, response.getWriter());
         } else {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }

@@ -49,18 +49,40 @@
             </td>
         </tr>
         <tr>
-            <td> Title</td>
-            <td th:text="${film.getTitle()}">
+            <td> Producer</td>
+            <td th:text="${film.getProducer()}">
             </td>
         </tr>
         <tr>
-            <td> Characters</td>
-            <td th:text="${film.getCharacters().size()}">
+            <td>
+                Characters
+            </td>
+            <td align="center">
+                <div th:if="${film.getCharacters().size()>0}">
+                    <form action="/resident" method="post">
+                        <button class="btn btn-outline-info" th:text="${film.getCharacters().size()}"
+                                th:value="${film.getCharacters()}"
+                                type="submit" name="residents">
+                            0
+                        </button>
+                    </form>
+                </div>
+                <span th:unless="${film.getCharacters().size()>0}">0</span>
             </td>
         </tr>
         <tr>
             <td> Planets</td>
-            <td th:text="${film.getPlanets().size()}">
+            <td align="center">
+                <div th:if="${film.getPlanets().size()>0}">
+                    <form action="/planets" method="post">
+                        <button class="btn btn-outline-info" th:text="${film.getPlanets().size()}"
+                                th:value="${film.getPlanets()}"
+                                type="submit" name="planets">
+                            0
+                        </button>
+                    </form>
+                </div>
+                <span th:unless="${film.getPlanets().size()>0}">0</span>
             </td>
         </tr>
     </table>

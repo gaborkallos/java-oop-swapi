@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb48ce68-d549-4ba7-bf22-38135619e14d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/VehiclesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Vehicle.java" afterDir="false" />
+    <list default="true" id="bb48ce68-d549-4ba7-bf22-38135619e14d" name="Default Changelist" comment="vehicles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/VehiclesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/VehiclesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/film.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/film.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/films.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/films.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/residents.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/residents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/vehicles.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/vehicles.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,23 +32,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.70559096">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/films.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-765">
-                  <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+                <state relative-caret-position="68">
+                  <caret line="85" column="80" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
                 </state>
               </provider>
             </entry>
@@ -58,8 +47,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/film.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+                <state relative-caret-position="265">
+                  <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,102 +57,32 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Vehicle.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1937#1953#0" expanded="true" />
-                    <element signature="e#2012#2013#0" expanded="true" />
-                    <element signature="e#2039#2040#0" expanded="true" />
-                    <element signature="e#2105#2106#0" expanded="true" />
-                    <element signature="e#2137#2138#0" expanded="true" />
-                    <element signature="e#2196#2197#0" expanded="true" />
-                    <element signature="e#2224#2225#0" expanded="true" />
-                    <element signature="e#2293#2294#0" expanded="true" />
-                    <element signature="e#2327#2328#0" expanded="true" />
-                    <element signature="e#2400#2401#0" expanded="true" />
-                    <element signature="e#2435#2436#0" expanded="true" />
-                    <element signature="e#2525#2526#0" expanded="true" />
-                    <element signature="e#2573#2574#0" expanded="true" />
-                    <element signature="e#2650#2651#0" expanded="true" />
-                    <element signature="e#2686#2687#0" expanded="true" />
-                    <element signature="e#2781#2782#0" expanded="true" />
-                    <element signature="e#2831#2832#0" expanded="true" />
-                    <element signature="e#2892#2893#0" expanded="true" />
-                    <element signature="e#2921#2922#0" expanded="true" />
-                    <element signature="e#2993#2994#0" expanded="true" />
-                    <element signature="e#3029#3030#0" expanded="true" />
-                    <element signature="e#3120#3121#0" expanded="true" />
-                    <element signature="e#3163#3164#0" expanded="true" />
-                    <element signature="e#3400#3401#0" expanded="true" />
-                    <element signature="e#3427#3428#0" expanded="true" />
-                    <element signature="e#3493#3494#0" expanded="true" />
-                    <element signature="e#3525#3526#0" expanded="true" />
-                    <element signature="e#3594#3595#0" expanded="true" />
-                    <element signature="e#3627#3628#0" expanded="true" />
-                    <element signature="e#3711#3712#0" expanded="true" />
-                    <element signature="e#3755#3756#0" expanded="true" />
-                    <element signature="e#3831#3832#0" expanded="true" />
-                    <element signature="e#3867#3868#0" expanded="true" />
-                    <element signature="e#3961#3962#0" expanded="true" />
-                    <element signature="e#4011#4012#0" expanded="true" />
-                    <element signature="e#4082#4083#0" expanded="true" />
-                    <element signature="e#4116#4117#0" expanded="true" />
-                    <element signature="e#4203#4204#0" expanded="true" />
-                    <element signature="e#4249#4250#0" expanded="true" />
-                    <element signature="e#4323#4324#0" expanded="true" />
-                    <element signature="e#4358#4359#0" expanded="true" />
-                    <element signature="e#4449#4450#0" expanded="true" />
-                    <element signature="e#4497#4498#0" expanded="true" />
-                    <element signature="e#4564#4565#0" expanded="true" />
-                    <element signature="e#4593#4594#0" expanded="true" />
-                    <element signature="e#4671#4672#0" expanded="true" />
-                    <element signature="e#4707#4708#0" expanded="true" />
-                    <element signature="e#4772#4773#0" expanded="true" />
-                    <element signature="e#4800#4801#0" expanded="true" />
-                    <element signature="e#4875#4876#0" expanded="true" />
-                    <element signature="e#4909#4910#0" expanded="true" />
-                    <element signature="e#4972#4973#0" expanded="true" />
-                    <element signature="e#5002#5003#0" expanded="true" />
-                    <element signature="e#5077#5078#0" expanded="true" />
-                    <element signature="e#5115#5116#0" expanded="true" />
-                    <element signature="e#5176#5177#0" expanded="true" />
-                    <element signature="e#5205#5206#0" expanded="true" />
-                    <element signature="e#5277#5278#0" expanded="true" />
-                    <element signature="e#5313#5314#0" expanded="true" />
-                    <element signature="e#5368#5369#0" expanded="true" />
-                    <element signature="e#5394#5395#0" expanded="true" />
-                    <element signature="e#5457#5458#0" expanded="true" />
-                    <element signature="e#5487#5488#0" expanded="true" />
-                    <element signature="e#5566#5567#0" expanded="true" />
-                    <element signature="e#5614#5615#0" expanded="true" />
-                    <element signature="e#5701#5702#0" expanded="true" />
-                    <element signature="e#5759#5760#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/VehiclesController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/vehicles.html">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetsController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+                <state relative-caret-position="-172">
+                  <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/residents.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="290">
+                  <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/films.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="282">
+                  <caret line="77" column="25" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="77" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -187,7 +106,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmsController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
+                <state relative-caret-position="782">
                   <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -228,18 +147,19 @@
         <option value="$PROJECT_DIR$/src/main/webapp/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/People.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Film.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/templates/residents.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/ResidentsController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/templates/films.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/custom.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/templates/film.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Vehicle.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/VehiclesController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/vehicles.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/residents.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/films.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/film.html" />
       </list>
     </option>
   </component>
@@ -397,7 +317,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551341631748" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551345083911" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -540,17 +460,32 @@
       <option name="project" value="LOCAL" />
       <updated>1551285645597</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="vehicles">
+      <created>1551341631986</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551341631986</updated>
+    </task>
+    <task id="LOCAL-00009" summary="gitignore">
+      <created>1551342040999</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1551342041002</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40233000" />
+    <option name="totallyTimeSpent" value="43777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.29166666" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.21804096" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -568,7 +503,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952693" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -650,18 +585,13 @@
     <MESSAGE value="resident merged into the develop" />
     <MESSAGE value="FilmController to FilmsController&#10;new class - FilmController" />
     <MESSAGE value="film html + controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="film html + controller" />
+    <MESSAGE value="vehicles" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/java-oop-swapi.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-290">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -784,27 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/residents.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/films.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -844,16 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -878,20 +777,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/film.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="782">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/models/Vehicle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
+        <state relative-caret-position="61">
           <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -966,20 +871,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/FilmsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/VehiclesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+        <state relative-caret-position="333">
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -988,8 +883,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/vehicles.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/residents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/films.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="77" column="25" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="77" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/film.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <caret line="85" column="80" lean-forward="true" selection-start-line="85" selection-start-column="80" selection-end-line="85" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/swapi/controller/PlanetsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
