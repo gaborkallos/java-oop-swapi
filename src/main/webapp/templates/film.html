@@ -33,6 +33,9 @@
 <div align="center" style="top:0px; height: 600px; width: 100%">
     <div id="titles">
         <div id="titlecontent">
+            <div align="center">
+                <img src="../static/image/logo.png" style="height: 150px">
+            </div>
             <p align="center" th:text="${#strings.toUpperCase(film.getTitle())}"></p>
             <br>
             <p th:text="${film.getOpeningCrawl()}">
@@ -42,7 +45,7 @@
     </div>
 </div>
 
-<div class="container" style="top:600px">
+<div class="container" style="top:400px">
     <table class="table table-hover table-dark" width="100%">
         <thead>
         <th align="center" th:text="${film.getTitle}" style="font-size: 200%"> Title</th>
@@ -87,6 +90,36 @@
                     </form>
                 </div>
                 <span th:unless="${film.getPlanets().size()>0}">0</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Starships</td>
+            <td>
+                <div th:if="${film.getStarships().size()>0}">
+                    <form action="/starships" method="post">
+                        <button class="btn btn-outline-info" th:text="${film.getStarships().size()}"
+                                th:value="${film.getStarships()}"
+                                type="submit" name="starships">
+                            0
+                        </button>
+                    </form>
+                </div>
+                <span th:unless="${film.getStarships().size()>0}">0</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Vehicles</td>
+            <td>
+                <div th:if="${film.getVehicles().size()>0}">
+                    <form action="/vehicles" method="post">
+                        <button class="btn btn-outline-info" th:text="${film.getVehicles().size()}"
+                                th:value="${film.getVehicles()}"
+                                type="submit" name="vehicles">
+                            0
+                        </button>
+                    </form>
+                </div>
+                <span th:unless="${film.getVehicles().size()>0}">0</span>
             </td>
         </tr>
     </table>
