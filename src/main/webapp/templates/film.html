@@ -29,10 +29,11 @@
 </head>
 <body class="starwars-header">
 <embed src="/static/sound/swtheme.mp3" autostart="true" loop="true" width="2" height="0">
+<div th:replace="header.html :: copy"></div>
 <div align="center" style="top:0px; height: 600px; width: 100%">
     <div id="titles">
         <div id="titlecontent">
-            <p align="center" th:text="${film.getTitle()}"></p>
+            <p align="center" th:text="${#strings.toUpperCase(film.getTitle())}"></p>
             <br>
             <p th:text="${film.getOpeningCrawl()}">
                 Opening crawl
