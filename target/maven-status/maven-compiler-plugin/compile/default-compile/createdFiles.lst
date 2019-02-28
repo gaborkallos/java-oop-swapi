@@ -4,3 +4,5 @@ com/codecool/swapi/controller/FilmsController.class
 com/codecool/swapi/controller/ResidentsController.class
 com/codecool/swapi/controller/PlanetsController.class
 com/codecool/swapi/models/People.class
+com/codecool/swapi/controller/StarshipsController.class
+com/codecool/swapi/models/Starship.class

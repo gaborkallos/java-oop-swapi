@@ -35,7 +35,8 @@
                 <th>Manufacture</th>
                 <th>Cost</th>
                 <th>Length</th>
-                <th>Speed</th>
+                <th>Atmosphering speed</th>
+                <th>Hyper speed</th>
                 <th>Class</th>
                 <th>Pilots</th>
                 <th>Films</th>
@@ -43,37 +44,38 @@
             </thead>
             <tbody>
             <div>
-                <tr th:each="vehicle : ${vehicles}">
-                    <td th:text="${vehicle.getName()}">Name</td>
-                    <td th:text="${vehicle.getModel()}" align="center"> model</td>
-                    <td th:text="${vehicle.getManufacturer()}" align="center"> manufacture</td>
-                    <td th:text="${vehicle.getCostInCredits()}" align="center"> cost</td>
-                    <td th:text="${vehicle.getLength()}" align="center"> length</td>
-                    <td th:text="${vehicle.getMaxAtmospheringSpeed()}" align="center"> speed</td>
-                    <td th:text="${vehicle.getVehicleClass()}" align="center"> class</td>
+                <tr th:each="starship : ${starships}">
+                    <td th:text="${starship.getName()}">Name</td>
+                    <td th:text="${starship.getModel()}">Model</td>
+                    <td th:text="${starship.getManufacturer()}">Manufacturer</td>
+                    <td th:text="${starship.getCostInCredits()}">Cost</td>
+                    <td th:text="${starship.getLength()}">Length</td>
+                    <td th:text="${starship.getMaxAtmospheringSpeed()}">Atmosphering speed</td>
+                    <td th:text="${starship.getHyperdriveRating()}">Hyper speed</td>
+                    <td th:text="${starship.getStarshipClass()}">Class</td>
                     <td align="center">
-                        <div th:if="${vehicle.getPilots().size()>0}">
+                        <div th:if="${starship.getPilots().size()>0}">
                             <form action="/resident" method="post">
-                                <button class="btn btn-outline-info" th:text="${vehicle.getPilots().size()}"
-                                        th:value="${vehicle.getPilots()}"
+                                <button class="btn btn-outline-info" th:text="${starship.getPilots().size()}"
+                                        th:value="${starship.getPilots()}"
                                         type="submit" name="residents">
                                     0
                                 </button>
                             </form>
                         </div>
-                        <span th:unless="${vehicle.getPilots().size()>0}">0</span>
+                        <span th:unless="${starship.getPilots().size()>0}">0</span>
                     </td>
                     <td align="center">
-                        <div th:if="${vehicle.getFilms().size()>0}">
+                        <div th:if="${starship.getFilms().size()>0}">
                             <form action="/films" method="post">
-                                <button class="btn btn-outline-info" th:text="${vehicle.getFilms().size()}"
-                                        th:value="${vehicle.getFilms()}"
+                                <button class="btn btn-outline-info" th:text="${starship.getFilms().size()}"
+                                        th:value="${starship.getFilms()}"
                                         type="submit" name="films">
                                     0
                                 </button>
                             </form>
                         </div>
-                        <span th:unless="${vehicle.getFilms().size()>0}">0</span>
+                        <span th:unless="${starship.getFilms().size()>0}">0</span>
                     </td>
 
                 </tr>
