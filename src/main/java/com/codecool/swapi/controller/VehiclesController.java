@@ -1,8 +1,8 @@
 package com.codecool.swapi.controller;
 
-
 import com.codecool.swapi.config.TemplateEngineUtil;
 import com.codecool.swapi.models.Film;
+import com.codecool.swapi.models.Vehicle;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.ContentResponse;
@@ -23,8 +23,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/films"})
-public class FilmsController extends HttpServlet {
+
+@WebServlet(urlPatterns = {"/vehicles"})
+public class VehiclesController extends HttpServlet {
 
 
     @Override
@@ -32,11 +33,11 @@ public class FilmsController extends HttpServlet {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
         WebContext context = new WebContext(request, response, request.getServletContext());
         response.setCharacterEncoding("utf-8");
-        String filmsURL = request.getParameter("films");
-        if (filmsURL != null) {
-            List<String> filmsURLList = Arrays.asList(filmsURL.substring(1, filmsURL.length() - 1).split(", "));
-            List<Film> films = new ArrayList<>();
-            for (String url : filmsURLList) {
+        String vehiclesUrl = request.getParameter("vehicles");
+        if (vehiclesUrl != null) {
+            List<String> vehiclesUrlList = Arrays.asList(vehiclesUrl.substring(1, vehiclesUrl.length() - 1).split(", "));
+            List<Vehicle> vehicles = new ArrayList<>();
+            for (String url : vehiclesUrlList) {
                 HttpClient httpClient = new HttpClient(new SslContextFactory());
 
                 try {
@@ -49,15 +50,15 @@ public class FilmsController extends HttpServlet {
 
                     String contentAsString = resp.getContentAsString();
                     ObjectMapper mapper = new ObjectMapper();
-                    Film film = mapper.readValue(contentAsString, Film.class);
-                    films.add(film);
+                    Vehicle vehicle = mapper.readValue(contentAsString, Vehicle.class);
+                    vehicles.add(vehicle);
                     httpClient.stop();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-            context.setVariable("films", films);
-            engine.process("films.html", context, response.getWriter());
+            context.setVariable("vehicles", vehicles);
+            engine.process("vehicle.html", context, response.getWriter());
         } else {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }

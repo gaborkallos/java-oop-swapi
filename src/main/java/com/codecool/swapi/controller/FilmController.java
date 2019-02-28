@@ -18,9 +18,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 
 @WebServlet(urlPatterns = {"/film"})
@@ -32,7 +29,6 @@ public class FilmController extends HttpServlet {
         WebContext context = new WebContext(request, response, request.getServletContext());
         response.setCharacterEncoding("utf-8");
         String url = request.getParameter("film");
-        System.out.println(url);
         if (url != null) {
             HttpClient httpClient = new HttpClient(new SslContextFactory());
 

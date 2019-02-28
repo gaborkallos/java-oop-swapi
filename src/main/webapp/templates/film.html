@@ -25,8 +25,8 @@
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- End of Bootstrap components -->
 </head>
-<body>
-<div class="starwars-header" align="center" style="top:0px; height: 600px; width: 100%">
+<body class="starwars-header">
+<div align="center" style="top:0px; height: 600px; width: 100%">
     <div id="titles">
         <div id="titlecontent">
             <p align="center" th:text="${film.getTitle()}"></p>
@@ -39,11 +39,9 @@
 </div>
 
 <div class="container" style="top:600px">
-    <table class="table table-hover" width="100%">
+    <table class="table table-hover table-dark" width="100%">
         <thead>
-        <tr>
-            <th th:text="${film.getTitle}"> Title </th>
-        </tr>
+        <th align="center" th:text="${film.getTitle}"> Title</th>
         </thead>
         <tr>
             <td> Director</td>

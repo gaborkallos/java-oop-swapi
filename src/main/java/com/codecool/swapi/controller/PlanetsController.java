@@ -23,7 +23,7 @@ import java.util.Objects;
 
 
 @WebServlet(urlPatterns = {"/"})
-public class PlanetController extends HttpServlet {
+public class PlanetsController extends HttpServlet {
 
     private int pageNumber = 1;
 
