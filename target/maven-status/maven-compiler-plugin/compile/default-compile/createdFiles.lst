@@ -1,7 +1,9 @@
 com/codecool/swapi/controller/FilmController.class
 com/codecool/swapi/models/Film.class
 com/codecool/swapi/controller/FilmsController.class
+com/codecool/swapi/models/Vehicle.class
 com/codecool/swapi/controller/ResidentsController.class
+com/codecool/swapi/controller/VehiclesController.class
 com/codecool/swapi/controller/PlanetsController.class
 com/codecool/swapi/models/People.class
 com/codecool/swapi/controller/StarshipsController.class
